@@ -1,9 +1,13 @@
 {
-  "name": "my-app",
+  "name": "nodejs",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "next": "11.1.0",
