@@ -53,5 +53,6 @@ jobs:
           username: ${{ secrets.DIGITALOCEAN_USER }} # User of the server you want to ssh into
           script: |            
             cd /home/deployment 
+            docker pull registry.digitalocean.com/jose-container/nodejstest
             docker-compose up -d 
             echo 'Deployment successful to digital ocean' 
