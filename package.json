@@ -5,9 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "test": "./node_modules/.bin/mocha",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "mocha spec"
+
   },
   "dependencies": {
     "next": "11.1.0",
