@@ -19,9 +19,10 @@ jobs:
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
+      - name: install mocha ${{ matrix.node-version }}  
+      - run: npm install -g mocha   
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
       - run: npm run build --if-present
-      - run: npm install -g mocha 
       - run: mocha tests/test.js
