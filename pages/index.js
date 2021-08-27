@@ -13,7 +13,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Bienvenido <a href="https://nextjs.org">github Actions Runing with docker registry! cambios en Dev</a>
+          Bienvenido <a href="https://nextjs.org">github Actions Runing with docker registry! hola israel</a>
         </h1>
 
         <p className={styles.description}>
