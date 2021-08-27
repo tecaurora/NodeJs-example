@@ -33,7 +33,7 @@ jobs:
       - name: Checkout the repo 
         uses: actions/checkout@v2
       - name: Build image 
-        run: docker build -t docker build -t registry.digitalocean.com/jose-container/nodejstest:${{github.event.inputs.version }} .
+        run: docker build -t docker build -t registry.digitalocean.com/jose-container/nodejstest .
       - name: Install doctl 
         uses: digitalocean/action-doctl@v2
         with:
@@ -41,7 +41,7 @@ jobs:
       - name: Log in to DO Container Registry 
         run: doctl registry login --expiry-seconds 600    
       - name: Push image to DO Container Registry 
-        run: docker push registry.digitalocean.com/jose-container/nodejstest:${{ github.event.inputs.version }}
+        run: docker push registry.digitalocean.com/jose-container/nodejstest
 
   deploy:
     runs-on: ubuntu-latest
